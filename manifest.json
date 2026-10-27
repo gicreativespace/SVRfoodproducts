@@ -1,0 +1,23 @@
+
+{
+  "id": "./",
+  "name": "Cotton Mitra - SVR FOOD PRODUCTS",
+  "short_name": "Cotton Mitra",
+  "description": "Your Idly Ravva & Minapagullu Expert",
+  "lang": "en-IN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f4eb",
+  "theme_color": "#214b35",
+  "categories": ["food", "shopping", "education"],
+  "icons": [
+    {
+      "src": "./assets/icons/cotton-mitra.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

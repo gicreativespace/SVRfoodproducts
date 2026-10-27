@@ -1,351 +1,262 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Cotton Mitra | SVR FOOD PRODUCTS</title>
-
-  <meta
-    name="description"
-    content="Cotton Mitra - Your Idly Ravva & Minapagullu Expert. Explore SVR FOOD PRODUCTS, product information, recipes and bulk-order contact details."
-  >
-
-  <meta name="theme-color" content="#214b35">
+  <meta name="description" content="SVR FOOD PRODUCTS Cotton Mitra — Idly Ravva, Rice Ravva, Urad Gota, recipes and bulk-order information.">
+  <meta name="theme-color" content="#164734">
   <meta name="application-name" content="Cotton Mitra">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta
-    name="apple-mobile-web-app-status-bar-style"
-    content="default"
-  >
-  <meta
-    name="apple-mobile-web-app-title"
-    content="Cotton Mitra"
-  >
+  <meta name="apple-mobile-web-app-title" content="Cotton Mitra">
 
   <link rel="manifest" href="./manifest.json">
-  <link
-    rel="icon"
-    href="./assets/icons/cotton-mitra.svg"
-    type="image/svg+xml"
-  >
-  <link
-    rel="apple-touch-icon"
-    href="./assets/icons/cotton-mitra.svg"
-  >
-
+  <link rel="icon" href="./assets/icons/cotton-mitra.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container header-content">
-      <a class="brand" href="./" aria-label="Cotton Mitra home">
-        <span class="brand-icon" aria-hidden="true">🌾</span>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Cotton Mitra home">
+      <span class="brand-icon" aria-hidden="true">🌾</span>
+      <span>
+        <strong>Cotton Mitra</strong>
+        <small>SVR FOOD PRODUCTS</small>
+      </span>
+    </a>
 
-        <span class="brand-text">
-          <strong>Cotton Mitra</strong>
-          <small>SVR FOOD PRODUCTS</small>
-        </span>
-      </a>
-
-      <div class="header-actions">
-        <label for="language-select" class="visually-hidden">
-          Select language
-        </label>
-
-        <select id="language-select" aria-label="Select language">
-          <option value="en">English</option>
-          <option value="te">తెలుగు</option>
-        </select>
-      </div>
-    </div>
+    <label for="language" class="visually-hidden">Language</label>
+    <select id="language" aria-label="Choose language">
+      <option value="te">తెలుగు</option>
+      <option value="en">English</option>
+    </select>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="container hero-content">
-        <p class="eyebrow">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-te="SVR FOOD PRODUCTS" data-en="SVR FOOD PRODUCTS">
           SVR FOOD PRODUCTS
         </p>
 
-        <h1>
-          Cotton Mitra <span aria-hidden="true">🌾</span>
+        <h1 data-te="కాటన్ మిత్ర 🌾" data-en="Cotton Mitra 🌾">
+          కాటన్ మిత్ర 🌾
         </h1>
 
-        <h2>Your Idly Ravva &amp; Minapagullu Expert</h2>
-
-        <p>
+        <h2 data-te="ఇడ్లీ రవ్వైనా… మినపగుళ్లైనా… అడగండి!"
+            data-en="Your Idly Ravva & Minapagullu Expert">
           ఇడ్లీ రవ్వైనా… మినపగుళ్లైనా… అడగండి!
+        </h2>
+
+        <p data-te="SVR ఉత్పత్తులు, ప్యాక్ పరిమాణాలు, ఇడ్లీ తయారీ సూచనలు మరియు బల్క్ ఆర్డర్ల వివరాలు తెలుసుకోండి."
+           data-en="Explore SVR products, pack sizes, idli preparation guidance and bulk-order information.">
+          SVR ఉత్పత్తులు, ప్యాక్ పరిమాణాలు, ఇడ్లీ తయారీ సూచనలు మరియు బల్క్ ఆర్డర్ల వివరాలు తెలుసుకోండి.
         </p>
 
-        <p>
-          Explore our products, discover useful idli-making tips,
-          and contact us for product and bulk-order enquiries.
+        <a class="button primary" href="#products"
+           data-te="ఉత్పత్తులను చూడండి"
+           data-en="Explore Products">
+          ఉత్పత్తులను చూడండి
+        </a>
+      </div>
+
+      <div class="hero-mark" aria-hidden="true">🌾</div>
+    </section>
+
+    <section class="section" id="products-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow" data-te="మా ఉత్పత్తులు" data-en="OUR PRODUCTS">మా ఉత్పత్తులు</p>
+          <h2 data-te="SVR ఉత్పత్తుల శ్రేణి" data-en="SVR Product Range">
+            SVR ఉత్పత్తుల శ్రేణి
+          </h2>
+        </div>
+      </div>
+
+      <p data-te="ప్యాక్ పరిమాణాన్ని ఎంచుకుంటే సంబంధిత చిత్రం కనిపిస్తుంది."
+         data-en="Select a pack size to display its corresponding product image.">
+        ప్యాక్ పరిమాణాన్ని ఎంచుకుంటే సంబంధిత చిత్రం కనిపిస్తుంది.
+      </p>
+
+      <div id="products" class="product-grid" aria-live="polite">
+        <p data-te="ఉత్పత్తులు లోడ్ అవుతున్నాయి..." data-en="Loading products...">
+          ఉత్పత్తులు లోడ్ అవుతున్నాయి...
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="combo" id="combination">
+        <p class="eyebrow" data-te="ప్రత్యేక కాంబినేషన్" data-en="SPECIAL COMBINATION">
+          ప్రత్యేక కాంబినేషన్
         </p>
 
-        <a class="primary-button" href="#products">
-          Explore Products
+        <h2 data-te="1 + 5 COTTON SPECIAL COMBINATION"
+            data-en="1 + 5 COTTON SPECIAL COMBINATION">
+          1 + 5 COTTON SPECIAL COMBINATION
+        </h2>
+
+        <div class="combo-details">
+          <div>
+            <strong>1 kg</strong>
+            <span data-te="ఇడ్లీ రవ్వ" data-en="Idly Ravva">ఇడ్లీ రవ్వ</span>
+          </div>
+          <span class="plus">+</span>
+          <div>
+            <strong>200 g</strong>
+            <span data-te="మినపగుళ్లు" data-en="Urad Gota">మినపగుళ్లు</span>
+          </div>
+        </div>
+
+        <p data-te="ప్రచార అంచనా: సుమారు 80 ఇడ్లీలు. వాస్తవ సంఖ్య ఇడ్లీ పరిమాణం, తయారీ విధానాన్ని బట్టి మారవచ్చు."
+           data-en="Promotional estimate: approximately 80 idlis. Actual yield varies with idli size and preparation.">
+          ప్రచార అంచనా: సుమారు 80 ఇడ్లీలు. వాస్తవ సంఖ్య ఇడ్లీ పరిమాణం, తయారీ విధానాన్ని బట్టి మారవచ్చు.
+        </p>
+
+        <p data-te="₹1 ప్రతి ఇడ్లీ అనేది ముడి పదార్థాల ప్రచార అంచనా మాత్రమే. Gas, labour మరియు ఇతర ఖర్చులు ఇందులో లేవు."
+           data-en="₹1 per idli is an advertised raw-material estimate only. Fuel, labour and other costs are excluded.">
+          ₹1 ప్రతి ఇడ్లీ అనేది ముడి పదార్థాల ప్రచార అంచనా మాత్రమే. Gas, labour మరియు ఇతర ఖర్చులు ఇందులో లేవు.
+        </p>
+
+        <a class="button primary"
+           href="https://wa.me/919491084447"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-te="WhatsApp ద్వారా అడగండి"
+           data-en="Enquire on WhatsApp">
+          WhatsApp ద్వారా అడగండి
         </a>
       </div>
     </section>
 
-    <section class="products-section" id="products-section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">OUR PRODUCTS</p>
-          <h2>SVR Product Range</h2>
-          <p>
-            Choose your product and pack size to see the corresponding
-            product information.
-          </p>
-        </div>
+    <section class="section" id="ask">
+      <p class="eyebrow" data-te="కాటన్ మిత్రను అడగండి" data-en="ASK COTTON MITRA">
+        కాటన్ మిత్రను అడగండి
+      </p>
 
-        <div id="products" class="products-grid">
-          <p>Loading products...</p>
-        </div>
-      </div>
+      <h2 data-te="మీకు ఏ సమాచారం కావాలి?" data-en="How can we help you?">
+        మీకు ఏ సమాచారం కావాలి?
+      </h2>
+
+      <p data-te="SVR ఉత్పత్తులు, ప్యాక్ పరిమాణాలు, కాంబినేషన్ లేదా ఇడ్లీ తయారీ గురించి అడగండి."
+         data-en="Ask about SVR products, pack sizes, the special combination or idli preparation.">
+        SVR ఉత్పత్తులు, ప్యాక్ పరిమాణాలు, కాంబినేషన్ లేదా ఇడ్లీ తయారీ గురించి అడగండి.
+      </p>
+
+      <form id="question-form">
+        <label for="question" data-te="మీ ప్రశ్న" data-en="Your question">
+          మీ ప్రశ్న
+        </label>
+
+        <textarea id="question" name="question" rows="4" required
+          placeholder="మీ ప్రశ్నను ఇక్కడ రాయండి..."></textarea>
+
+        <button class="button primary" type="submit"
+          data-te="సమాధానం చూడండి"
+          data-en="Get Answer">
+          సమాధానం చూడండి
+        </button>
+      </form>
+
+      <div id="answer" class="answer" role="status" aria-live="polite" hidden></div>
+
+      <p class="small-note"
+         data-te="ఇది FAQ ఆధారిత సహాయకం. Recipe timings ఇంకా draft సూచనలు మాత్రమే; అధికారిక SVR సూచనలుగా భావించకండి."
+         data-en="This assistant uses a local FAQ. Recipe timings are draft guidance and are not official SVR specifications.">
+        ఇది FAQ ఆధారిత సహాయకం. Recipe timings ఇంకా draft సూచనలు మాత్రమే; అధికారిక SVR సూచనలుగా భావించకండి.
+      </p>
     </section>
 
-    <section class="combination-section" id="combination">
-      <div class="container combination-content">
-        <p class="eyebrow">SPECIAL COMBINATION</p>
-
-        <h2>1 + 5 Cotton Special Combination</h2>
-
-        <p>
-          1 kg Idly Ravva + 200 g Urad Gota
-        </p>
-
-        <p>
-          Campaign estimate: approximately 80 idlis.
-          Actual yield depends on preparation and serving size.
-        </p>
-
-        <p>
-          The advertised ₹1 per idli refers to the estimated raw-material
-          cost in the campaign, not total preparation expenses.
-        </p>
-
-        <a
-          class="primary-button"
-          href="https://wa.me/919491084447"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Enquire on WhatsApp
-        </a>
-      </div>
-    </section>
-
-    <section class="question-section" id="ask-cotton-mitra">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">ASK COTTON MITRA</p>
-          <h2>How can we help you?</h2>
-
-          <p>
-            Ask about SVR products, pack sizes, idli preparation,
-            and our special combination.
-          </p>
-        </div>
-
-        <form id="question-form">
-          <label for="question">
-            Your question
-          </label>
-
-          <textarea
-            id="question"
-            name="question"
-            rows="4"
-            placeholder="Type your question here..."
-            required
-          ></textarea>
-
-          <button type="submit" class="primary-button">
-            Ask Cotton Mitra
-          </button>
-        </form>
-
-        <div
-          id="answer"
-          class="answer-box"
-          role="status"
-          aria-live="polite"
-        ></div>
-
-        <p class="small-note">
-          Cotton Mitra currently uses a local FAQ knowledge base.
-          It does not provide unrestricted AI answers.
-        </p>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">CONTACT US</p>
-          <h2>Connect with SVR FOOD PRODUCTS</h2>
-          <p>
-            For product details, dealer enquiries, and bulk orders,
-            please contact our team.
-          </p>
-        </div>
+    <section class="section" id="contact">
+      <div class="contact">
+        <p class="eyebrow" data-te="మమ్మల్ని సంప్రదించండి" data-en="CONTACT US">మమ్మల్ని సంప్రదించండి</p>
+        <h2 data-te="SVR FOOD PRODUCTS" data-en="SVR FOOD PRODUCTS">SVR FOOD PRODUCTS</h2>
 
         <div class="contact-grid">
-          <article class="contact-card">
-            <h3>WhatsApp – 1</h3>
-            <p>+91 94910 84447</p>
-            <a
-              href="https://wa.me/919491084447"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Chat on WhatsApp
-            </a>
-          </article>
+          <a class="contact-card" href="https://wa.me/919491084447"
+             target="_blank" rel="noopener noreferrer">
+            <span>WhatsApp 1</span>
+            <strong>+91 94910 84447</strong>
+            <span data-te="WhatsAppలో సంప్రదించండి" data-en="Chat on WhatsApp">WhatsAppలో సంప్రదించండి</span>
+          </a>
 
-          <article class="contact-card">
-            <h3>WhatsApp – 2</h3>
-            <p>+91 98669 48633</p>
-            <a
-              href="https://wa.me/919866948633"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Chat on WhatsApp
-            </a>
-          </article>
+          <a class="contact-card" href="https://wa.me/919866948633"
+             target="_blank" rel="noopener noreferrer">
+            <span>WhatsApp 2</span>
+            <strong>+91 98669 48633</strong>
+            <span data-te="WhatsAppలో సంప్రదించండి" data-en="Chat on WhatsApp">WhatsAppలో సంప్రదించండి</span>
+          </a>
 
-          <article class="contact-card">
-            <h3>Office Phone</h3>
-            <p>+91 63013 54654</p>
-            <a href="tel:+916301354654">
-              Call Office
-            </a>
-          </article>
+          <a class="contact-card" href="tel:+916301354654">
+            <span data-te="ఆఫీస్ ఫోన్" data-en="Office Phone">ఆఫీస్ ఫోన్</span>
+            <strong>+91 63013 54654</strong>
+            <span data-te="కాల్ చేయండి" data-en="Call office">కాల్ చేయండి</span>
+          </a>
 
-          <article class="contact-card">
-            <h3>Email</h3>
-            <p>support@svrfoods.com</p>
-            <a href="mailto:support@svrfoods.com">
-              Send Email
-            </a>
-          </article>
+          <a class="contact-card" href="mailto:support@svrfoods.com">
+            <span>Email</span>
+            <strong>support@svrfoods.com</strong>
+            <span data-te="ఇమెయిల్ పంపండి" data-en="Send email">ఇమెయిల్ పంపండి</span>
+          </a>
 
-          <article class="contact-card">
-            <h3>Official Website</h3>
-            <p>SVR FOOD PRODUCTS</p>
-            <a
-              href="https://www.svrfoodproducts.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit Website
-            </a>
-          </article>
+          <a class="contact-card" href="https://www.svrfoodproducts.com/"
+             target="_blank" rel="noopener noreferrer">
+            <span data-te="అధికారిక వెబ్‌సైట్" data-en="Official Website">అధికారిక వెబ్‌సైట్</span>
+            <strong>svrfoodproducts.com</strong>
+            <span data-te="వెబ్‌సైట్ చూడండి" data-en="Visit website">వెబ్‌సైట్ చూడండి</span>
+          </a>
 
-          <article class="contact-card">
-            <h3>SVR Foods App</h3>
-            <p>Product and bulk-order enquiries</p>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.absolin.svrfoods"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open on Google Play
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="address-section" id="locations">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">OUR LOCATIONS</p>
-          <h2>Manufacturing Units</h2>
+          <a class="contact-card"
+             href="https://play.google.com/store/apps/details?id=com.absolin.svrfoods"
+             target="_blank" rel="noopener noreferrer">
+            <span>SVR Foods App</span>
+            <strong data-te="బల్క్ ఆర్డర్ల కోసం" data-en="For bulk orders">బల్క్ ఆర్డర్ల కోసం</strong>
+            <span data-te="Google Playలో చూడండి" data-en="Open on Google Play">Google Playలో చూడండి</span>
+          </a>
         </div>
 
-        <div class="address-grid">
-          <article class="address-card">
-            <h3>Unit 1</h3>
+        <div class="addresses">
+          <details>
+            <summary data-te="మా తయారీ యూనిట్లు" data-en="Our manufacturing units">
+              మా తయారీ యూనిట్లు
+            </summary>
             <p>
-              SRI VIJAYA DURGA INDUSTRIES
+              <strong>SRI VIJAYA DURGA INDUSTRIES</strong><br>
+              R.S. No. 145/2, Anaparthi Road, Ramavaram (V),
+              Anaparthi Mandal, East Godavari District, Andhra Pradesh.
             </p>
-            <address>
-              R.S. No. 145/2, Anaparthi Road,<br>
-              Ramavaram Village,<br>
-              Anaparthi Mandal,<br>
-              East Godavari District, Andhra Pradesh.
-            </address>
-          </article>
-
-          <article class="address-card">
-            <h3>Unit 2</h3>
             <p>
-              SRI VENKATA RAMA FOOD PRODUCTS
+              <strong>SRI VENKATA RAMA FOOD PRODUCTS</strong><br>
+              R.S. No. 86, Rajanagaram Road, Duppalapudi (V),
+              Anaparthi Mandal, East Godavari District, Andhra Pradesh.
             </p>
-            <address>
-              R.S. No. 86, Rajanagaram Road,<br>
-              Duppalapudi Village,<br>
-              Anaparthi Mandal,<br>
-              East Godavari District, Andhra Pradesh.
-            </address>
-          </article>
+          </details>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>
-        <strong>SVR FOOD PRODUCTS</strong>
-      </p>
-
-      <p>
-        Cotton Mitra 🌾 — Your Idly Ravva &amp; Minapagullu Expert
-      </p>
-
-      <p>
-        <a href="https://www.svrfoodproducts.com/"
-           target="_blank"
-           rel="noopener noreferrer">
-          www.svrfoodproducts.com
-        </a>
-      </p>
-
-      <p class="copyright">
-        Product information and recipes should be verified with
-        SVR FOOD PRODUCTS before being treated as official guidance.
-      </p>
-    </div>
+  <footer>
+    <p><strong>SVR FOOD PRODUCTS</strong></p>
+    <p>Cotton Mitra 🌾 — Your Idly Ravva &amp; Minapagullu Expert</p>
+    <p><a href="https://www.svrfoodproducts.com/" target="_blank" rel="noopener noreferrer">www.svrfoodproducts.com</a></p>
   </footer>
 
   <script src="./knowledge.js"></script>
   <script src="./app.js"></script>
 
   <script>
-    // Register the service worker for PWA and offline support.
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
-        navigator.serviceWorker
-          .register("./service-worker.js")
-          .then((registration) => {
-            console.log(
-              "Cotton Mitra PWA registered:",
-              registration.scope
-            );
+        navigator.serviceWorker.register("./service-worker.js")
+          .then(registration => {
+            console.log("Cotton Mitra PWA ready:", registration.scope);
           })
-          .catch((error) => {
-            console.error(
-              "Cotton Mitra service worker registration failed:",
-              error
-            );
+          .catch(error => {
+            console.warn("PWA registration unavailable:", error);
           });
       });
     }

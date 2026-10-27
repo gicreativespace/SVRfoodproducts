@@ -1,43 +1,49 @@
 
-const CACHE_NAME = "cotton-mitra-v1";
+"use strict";
+
+const CACHE_NAME = "cotton-mitra-v2";
 
 const APP_FILES = [
   "./",
   "./index.html",
   "./style.css",
-  "./knowledge.js",
   "./app.js",
+  "./knowledge.js",
   "./manifest.json",
   "./assets/icons/cotton-mitra.svg"
 ];
 
-// Install and cache the core app files.
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(async (cache) => {
+    (async () => {
+      const cache = await caches.open(CACHE_NAME);
+
       await Promise.all(
-        APP_FILES.map(async (file) => {
+        APP_FILES.map(async (path) => {
           try {
-            const response = await fetch(file);
+            const response = await fetch(path, {
+              cache: "reload"
+            });
 
             if (response.ok) {
-              await cache.put(file, response);
+              await cache.put(path, response);
             }
           } catch (error) {
-            // Continue if an individual file is unavailable.
+            // Missing optional files must not stop installation.
           }
         })
       );
 
       await self.skipWaiting();
-    })
+    })()
   );
 });
 
-// Remove older Cotton Mitra caches.
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then(async (keys) => {
+    (async () => {
+      const keys = await caches.keys();
+
       await Promise.all(
         keys
           .filter(
@@ -49,31 +55,30 @@ self.addEventListener("activate", (event) => {
       );
 
       await self.clients.claim();
-    })
+    })()
   );
 });
 
-// Serve cached files offline; refresh from the network when possible.
 self.addEventListener("fetch", (event) => {
   const request = event.request;
 
-  if (
-    request.method !== "GET" ||
-    new URL(request.url).origin !== self.location.origin
-  ) {
-    return;
-  }
+  if (request.method !== "GET") return;
+
+  const url = new URL(request.url);
+
+  // Do not intercept external websites or WhatsApp links.
+  if (url.origin !== self.location.origin) return;
 
   event.respondWith(
     (async () => {
-      const cached = await caches.match(request);
+      const cache = await caches.open(CACHE_NAME);
+      const cached = await cache.match(request);
 
       if (request.mode === "navigate") {
         try {
           const response = await fetch(request);
 
           if (response.ok) {
-            const cache = await caches.open(CACHE_NAME);
             await cache.put("./index.html", response.clone());
           }
 
@@ -81,20 +86,25 @@ self.addEventListener("fetch", (event) => {
         } catch (error) {
           return (
             cached ||
-            (await caches.match("./index.html")) ||
-            Response.error()
+            await cache.match("./index.html") ||
+            new Response(
+              "Cotton Mitra is offline. Please reconnect to the internet and try again.",
+              {
+                status: 503,
+                headers: { "Content-Type": "text/plain; charset=utf-8" }
+              }
+            )
           );
         }
       }
 
       if (cached) {
         // Return the cached file immediately.
-        // Update its cache for the next visit.
+        // Refresh the cache in the background when possible.
         event.waitUntil(
           fetch(request)
             .then(async (response) => {
               if (response.ok) {
-                const cache = await caches.open(CACHE_NAME);
                 await cache.put(request, response);
               }
             })
@@ -105,10 +115,17 @@ self.addEventListener("fetch", (event) => {
       }
 
       try {
-        return await fetch(request);
+        const response = await fetch(request);
+
+        if (response.ok) {
+          await cache.put(request, response.clone());
+        }
+
+        return response;
       } catch (error) {
-        return Response.error();
+        return new Response("", { status: 503 });
       }
     })()
   );
 });
+                      
